@@ -14,9 +14,9 @@ if(!empty($fullname) || !empty($email) || !empty($password)){
      $password_encrypted = password_hash($password, PASSWORD_DEFAULT);
      $input=mysqli_query($koneksi,"insert into data_member(fullname,email,password) values('$fullname','$email','$password_encrypted') ");
      if($input){
-        echo "<script>alert('Akun berhasil dibuat..'); window.location.href='login.php';</script>";
+        echo "<script>alert('Akun berhasil dibuat..'); window.location.href='index.php';</script>";
      }else{
-        echo "<script>alert('Akun gagal dibuat..'); window.location.href='login.php';</script>";
+        echo "<script>alert('Akun gagal dibuat..'); window.location.href='create_account.php';</script>";
      }
    }   
 }
