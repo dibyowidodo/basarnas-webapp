@@ -1,55 +1,55 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Signup</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">  
     <link href="bootstrap.min.css" rel="stylesheet">
 
     <style>
-      .bd-placeholder-img {
+    .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
         -moz-user-select: none;
         user-select: none;
-      }
+    }
 
-      @media (min-width: 768px) {
+    @media (min-width: 768px) {
         .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+            font-size: 3.5rem;
         }
-      }
+    }
 
-      .b-example-divider {
+    .b-example-divider {
         height: 3rem;
         background-color: rgba(0, 0, 0, .1);
         border: solid rgba(0, 0, 0, .15);
         border-width: 1px 0;
         box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+    }
 
-      .b-example-vr {
+    .b-example-vr {
         flex-shrink: 0;
         width: 1.5rem;
         height: 100vh;
-      }
+    }
 
-      .bi {
+    .bi {
         vertical-align: -.125em;
         fill: currentColor;
-      }
+    }
 
-      .nav-scroller {
+    .nav-scroller {
         position: relative;
         z-index: 2;
         height: 2.75rem;
         overflow-y: hidden;
-      }
+    }
 
-      .nav-scroller .nav {
+    .nav-scroller .nav {
         display: flex;
         flex-wrap: nowrap;
         padding-bottom: 1rem;
@@ -58,39 +58,41 @@
         text-align: center;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
-      }
+    }
     </style>
 
-    
+
     <!-- Custom styles for this template -->
     <link href="sign-in.css" rel="stylesheet">
-  </head>
-  <body class="text-center">
-    
-<main class="form-signin w-100 m-auto">
-  <form id="form_input" method="post" action="create_account_validation.php">
-    <img class="mb-4" src="Basarnas_Logo.png" alt="" width="102" height="102">
-    <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+</head>
 
-    <div class="form-floating">
-      <input type="fullname" name="fullname" id="floatingInput" placeholder="Name" class="form-control" required>
-      <label for="floatingInput">Name</label>
-    </div>
-    <div class="form-floating">
-      <input type="email" name="email" id="floatingInput" placeholder="name@example.com" class="form-control" required>
-      <label for="floatingInput">Email address</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" name="password" id="floatingPassword" placeholder="Password" class="form-control" required>
-      <label for="floatingPassword">Password</label>
-    </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit" value="Sign Up">Sign up</button>
-    <p class="mt-4 mb-3">Already have an account? <a href="login.php">Sign in now</a></p>
-    <p class="mt-1 mb-3 text-muted">&copy; 2022–2023</p>
-  </form>
-</main>
+<body class="text-center">
+
+    <main class="form-signin w-100 m-auto">
+        <form id="form_input" method="post" action="create_account_validation.php">
+            <img class="mb-4" src="Basarnas_Logo.png" alt="" width="102" height="102">
+            <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+
+            <div class="form-floating">
+                <input type="fullname" name="fullname" id="floatingInput" placeholder="Name" class="form-control" required>
+                <label for="floatingInput">Name</label>
+            </div>
+            <div class="form-floating">
+                <input type="email" name="email" id="floatingInput" placeholder="name@example.com" class="form-control" required>
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" name="password" id="floatingPassword" placeholder="Password" class="form-control" required>
+                <label for="floatingPassword">Password</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit" value="Sign Up">Sign up</button>
+            <p class="mt-4 mb-3">Already have an account? <a href="login.php">Sign in now</a></p>
+            <p class="mt-1 mb-3 text-muted">&copy; 2022–2023</p>
+        </form>
+    </main>
 
 
-    
-  </body>
+
+</body>
+
 </html>
