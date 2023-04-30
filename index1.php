@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -75,7 +77,7 @@
   <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
+      <a class="nav-link px-3" href="logout.php">Sign out</a>
     </div>
   </div>
 </header>
@@ -166,70 +168,44 @@
 
       
       <h2>Sungai Kapuas</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th scope="col">Datetime</th>
-              <th scope="col">Kecepatan Arus Sungai (m/s)</th>
-              <th scope="col">Kedalaman Sungai (m)</th>
-              <th scope="col">Suhu Air Sungai (&deg;C)</th>
-              <th scope="col">Latitude/Longitude</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2023-03-19 08:00:00</td>
-              <td>0.4</td>
-              <td>2.5</td>
-              <td>28</td>
-              <td><a href="https://www.google.com/maps?q=-0.1278,111.4237">-0.1278,111.4237</a></td>
-            </tr>
-            <tr>
-              <td>2023-03-19 09:00:00</td>
-              <td>0.5</td>
-              <td>3.0</td>
-              <td>28.5</td>
-              <td><a href="https://www.google.com/maps?q=-0.2986,111.4682">-0.2986,111.4682</a></td>
-            </tr>
-            <tr>
-              <td>2023-03-19 10:00:00</td>
-              <td>0.6</td>
-              <td>3.5</td>
-              <td>29</td>
-              <td><a href="https://www.google.com/maps?q=-0.4904,111.5344">-0.4904,111.5344</a></td>
-            </tr>
-            <tr>
-              <td>2023-03-19 11:00:00</td>
-              <td>0.7</td>
-              <td>4.0</td>
-              <td>29.5</td>
-              <td><a href="https://www.google.com/maps?q=-0.7216,111.6638">-0.7216,111.6638</a></td>
-            </tr>
-            <tr>
-              <td>2023-03-19 12:00:00</td>
-              <td>0.8</td>
-              <td>4.5</td>
-              <td>30</td>
-              <td><a href="https://www.google.com/maps?q=-0.9866,111.8918">-0.9866,111.8918</a></td>
-            </tr>
-            <tr>
-              <td>2023-03-19 13:00:00</td>
-              <td>0.9</td>
-              <td>5.0</td>
-              <td>30.5</td>
-              <td><a href="https://www.google.com/maps?q=-1.2897,112.2203">-1.2897,112.2203</a></td>
-            </tr>
-            <tr>
-              <td>2023-03-19 14:00:00</td>
-              <td>1.0</td>
-              <td>5.5</td>
-              <td>31</td>
-              <td><a href="https://www.google.com/maps?q=-1.6406,112.6516">-1.6406,112.6516</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <?php
+
+        $conn=mysqli_connect("mysql","user","root","dibyo") or die();
+
+        // Select data from the table
+        $sql = "SELECT id, datetime, kecepatan_arus, kedalaman_sungai, suhu_air_sungai, latitude, longitude FROM river_data";
+        $result = mysqli_query($conn, $sql);
+
+        if ($result->num_rows > 0) {
+            // Output data of each row
+            echo '<div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Datetime</th>
+                            <th scope="col">Kecepatan Arus Sungai (m/s)</th>
+                            <th scope="col">Kedalaman Sungai (m)</th>
+                            <th scope="col">Suhu Air Sungai (&deg;C)</th>
+                            <th scope="col">Latitude/Longitude</th>
+                        </tr>
+                    </thead>
+                    <tbody>';
+            while($row = $result->fetch_assoc()) {
+                echo '<tr>
+                        <td>' . $row["datetime"] . '</td>
+                        <td>' . $row["kecepatan_arus"] . '</td>
+                        <td>' . $row["kedalaman_sungai"] . '</td>
+                        <td>' . $row["suhu_air_sungai"] . '</td>
+                        <td><a href="https://www.google.com/maps?q=' . $row["latitude"] . ',' . $row["longitude"] . '">' . $row["latitude"] . ',' . $row["longitude"] . '</a></td>
+                    </tr>';
+            }
+            echo '</tbody></table></div>';
+        } else {
+            echo "0 results";
+        }
+        $conn->close();
+        ?>
+
     </main>
   </div>
 </div>
