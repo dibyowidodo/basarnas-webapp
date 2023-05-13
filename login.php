@@ -30,7 +30,7 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit" value="Login">Sign up</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit" value="Login">Log in</button>
         <p class="mt-4 mb-3">Don't have an account? <a href="create_account.php">Sign up now</a></p>
         <p class="mt-1 mb-3 text-muted">&copy; 2022–2023</p>
       </form>
