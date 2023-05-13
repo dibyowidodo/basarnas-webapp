@@ -164,16 +164,13 @@ if($_SESSION['user_autentification'] !="valid") {
 
       
 
-      <div class="row row-cols-1 row-cols-md-3 gx-4 text-center">
+      <div class="row row-cols-1 row-cols-md-2 gx-4 text-center">
         <div class="col themed-grid-col chart-font">Kecepatan Arus Sungai (m/s)</div>
-        <div class="col themed-grid-col chart-font">Kedalaman Sungai (m)</div>
         <div class="col themed-grid-col chart-font">Suhu Air Sungai (&deg;C)</div>
         <div class="col themed-grid-col">
           <canvas class="my-4 w-100" id="myChart1" width="900" height="380"></canvas></div>
         <div class="col themed-grid-col"> 
           <canvas class="my-4 w-100" id="myChart2" width="900" height="380"></canvas></div>
-        <div class="col themed-grid-col"> 
-          <canvas class="my-4 w-100" id="myChart3" width="900" height="380"></canvas></div>
       </div>
 
       
