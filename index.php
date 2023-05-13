@@ -142,23 +142,38 @@ if($_SESSION['user_autentification'] !="valid") {
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
             <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
           </div>
+
+          <div class="dropdown">
+            <button class="btn btn-sm btn-outline-secondary dropdown-toggle filter-margin-right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-feather="filter" class="align-text-bottom"></span>
+              Filter
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" type="button">Sungai Kapuas</button></li>
+              <li><button class="dropdown-item" type="button">Sungai Brantas</button></li>
+              <li><button class="dropdown-item" type="button">Sungai Ciliwung</button></li>
+            </ul>
+          </div>
         
           <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
             <span data-feather="calendar" class="align-text-bottom"></span>
-            Today
+            This week
           </button>
         </div>
       </div>
 
       
 
-      <div class="row row-cols-1 row-cols-md-2 gx-4 text-center">
+      <div class="row row-cols-1 row-cols-md-3 gx-4 text-center">
         <div class="col themed-grid-col chart-font">Kecepatan Arus Sungai (m/s)</div>
+        <div class="col themed-grid-col chart-font">Kedalaman Sungai (m)</div>
         <div class="col themed-grid-col chart-font">Suhu Air Sungai (&deg;C)</div>
         <div class="col themed-grid-col">
           <canvas class="my-4 w-100" id="myChart1" width="900" height="380"></canvas></div>
         <div class="col themed-grid-col"> 
           <canvas class="my-4 w-100" id="myChart2" width="900" height="380"></canvas></div>
+        <div class="col themed-grid-col"> 
+          <canvas class="my-4 w-100" id="myChart3" width="900" height="380"></canvas></div>
       </div>
 
       
@@ -209,6 +224,6 @@ if($_SESSION['user_autentification'] !="valid") {
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-    <script src="js/chart.js"></script>
+    <script src="js/dashboard.js"></script>
   </body>
 </html>
