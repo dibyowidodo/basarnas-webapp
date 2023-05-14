@@ -110,7 +110,7 @@ if($_SESSION['user_autentification'] !="valid") {
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="index3.php">
               <span data-feather="settings" class="align-text-bottom"></span>
               Settings
             </a>
